@@ -4,13 +4,20 @@
 # Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+def print_hi(word):
+  word_list = []
+
+  for i in word:
+      current_letter = i.lower()
+
+      if len(word_list) == 0:
+          word_list.append(i)
+      elif current_letter == word_list[-1].lower():
+          word_list.pop()
+      else:
+          word_list.append(i)
+  result = " ".join(word_list)
+  return result
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(print_hi("totally"))
