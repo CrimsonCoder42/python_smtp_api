@@ -56,8 +56,7 @@ def random_letter(name):
 # 4. Send the letter generated in step 3 to that person's email address.
 
 def send_email(email, content):
-    my_email = "python32testemail@gmail.com"
-    my_password = "gcwojpvcxrbjcnkc"
+   
     with smtplib.SMTP("smtp.gmail.com") as connection:
         connection.starttls()
         connection.login(user=my_email, password=my_password)
